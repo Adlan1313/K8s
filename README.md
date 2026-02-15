@@ -1,5 +1,5 @@
 # K8s
-# Kubernetes FastAPI Portfolio Project
+
 
 Простой проект для демонстрации навыков DevOps:
 
