@@ -1,0 +1,18 @@
+1. Подключаем kubectl к кластеру: 
+yc managed-kubernetes cluster get-credentials <cluster-name> --external
+kubectl get nodes   
+
+2. Применяем манифесты  и проверяем: 
+kubectl apply -f k8s/
+kubectl get pods
+kubectl get svc
+
+3. Проверяем внешний IP:
+kubectl get svc fastapi-service
+Далее открываем IP в браузере — видим {"message":"Hello from Kubernetes!"}
+
+4. Автомасштабирование 
+kubectl autoscale deployment fastapi-app --cpu-percent=50 --min=2 --max=5
+kubectl get hpa
+
+
